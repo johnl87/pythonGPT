@@ -1,8 +1,8 @@
 #importing openai library
 import openai
+import config
 
-API_KEY = '<>'
-openai.api_key = API_KEY
+openai.api_key = config.API_KEY
 model_name = 'cloneGPT-3.5'
 
 def chatGPT(prompts):
