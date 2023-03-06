@@ -16,6 +16,14 @@ def chatGPT(prompts):
     return prompts
 
 prompts = []
-prompts.
+prompts.append({'type': 'system', 'content': 'hi there'})
+prompts = chatGPT(prompts)
+print('{0}: {1}\n'.format(prompts[-1]['type'].strip(),prompts[-1]['content'].strip()))
+
+while True:
+    userPrompt = input('user:')
+    prompts.append({'type': 'user', 'content': userPrompt})
+    prompts = chatGPT(prompts)
+    print('{0}: {1}\n'.format(prompts[-1]['type'].strip(),prompts[-1]['content'].strip()))
 
 
